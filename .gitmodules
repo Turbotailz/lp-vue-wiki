@@ -1,0 +1,3 @@
+[submodule "src/wiki"]
+	path = src/wiki
+	url = git@github.com:luckperms/wiki
