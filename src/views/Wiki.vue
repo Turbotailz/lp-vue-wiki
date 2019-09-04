@@ -24,10 +24,7 @@
       this.html = require('@/wiki/'+page+'.md').default;
     },
     mounted() {
-      document.addEventListener('click', event => {
-        event.preventDefault();
-        console.log(event);
-      })
+
     }
   }
 </script>
