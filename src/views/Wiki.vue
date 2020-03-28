@@ -10,9 +10,11 @@
 </template>
 
 <script>
+  import Sidebar from '../wiki/_Sidebar.md';
+
   export default {
     components: {
-      'sidebar': resolve => require(['@/wiki/_Sidebar.md'], resolve),
+      Sidebar
     },
     data() {
       return {
@@ -21,7 +23,11 @@
     },
     created() {
       const page = this.$route.params.page;
-      this.html = require('@/wiki/'+page+'.md').default;
+      if (page) {
+        this.html = require('@/wiki/'+page+'.md').default;
+      } else {
+        this.$router.push('/wiki/Home');
+      }
     },
     mounted() {
 

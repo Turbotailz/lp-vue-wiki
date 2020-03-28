@@ -22,6 +22,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      path: '/wiki/',
+      name: 'wiki',
+      component: Wiki,
+    },
+    {
       path: '/wiki/:page',
       name: 'wiki',
       component: Wiki,
